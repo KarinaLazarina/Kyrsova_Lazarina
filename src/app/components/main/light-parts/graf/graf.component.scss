@@ -1,0 +1,36 @@
+@import "~src/sass/mixins";
+@import "~src/sass/variables";
+
+#graf{
+  min-height: $height1;
+  padding-top: 20px;
+}
+.title{
+  @include mainfont(600,17px,$grey);
+  position: absolute;
+  left: 50%;
+  margin-right: -50%;
+  margin-top: 10px;
+  transform: translate(-50%, -50%);
+}
+#MyChart{
+  margin-top: 30px;
+}
+
+#chartjs-tooltip {
+  position: absolute;
+  background: rgba(0, 0, 0, .7);
+  color: white;
+  border-radius: 25px;
+  -webkit-transition: all .1s ease;
+  transition: all .1s ease;
+  pointer-events: none;
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
+
+.chartjs-tooltip-key {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+}

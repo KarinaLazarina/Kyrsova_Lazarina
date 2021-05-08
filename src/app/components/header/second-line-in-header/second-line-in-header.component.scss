@@ -1,0 +1,59 @@
+@import "~src/sass/mixins";
+@import "~src/sass/variables";
+
+.header2 {
+  background: $header2-color;
+  height: 40px;
+
+  p {
+    @include mainfont(500, 15px, white);
+  }
+}
+
+.header_right {
+  @include align;
+  margin-left: auto;
+  margin-right: 20px;
+  margin-top: 0;
+
+  img {
+    height: 25px;
+  }
+
+  // button
+  .btn {
+    @include align(70%);
+    margin: 5px;
+    border-radius: 25px;
+    border: none;
+    background-color: $blue1;
+  }
+
+  p {
+    margin-top: 15px;
+  }
+}
+
+//search
+.form-control {
+  background: $main-color;
+  height: 65%;
+  border: 2px solid $main-color;
+  border-radius: 25px;
+  padding-left: 2.375rem;
+
+}
+
+.form-control:focus{
+  background: white;
+}
+
+form {
+  margin-left: 15px;
+}
+
+.search {
+  position: absolute;
+  height: 20px;
+  margin-inline-start: 10px;
+}

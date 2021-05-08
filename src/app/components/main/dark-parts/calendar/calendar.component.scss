@@ -1,0 +1,19 @@
+@import "~src/sass/mixins";
+@import "~src/sass/variables";
+
+.calendar1 {
+  min-height: $height2;
+  font-family: "Source Sans Pro";
+  font-weight: 600;
+  .obg{
+    margin-block-start: auto;
+  }
+  p{
+    display: inline-block;
+    @include mainfont(300,15px,white);
+  }
+  a{
+    margin-inline-start: 80px;
+    color: $blue1;
+  }
+}

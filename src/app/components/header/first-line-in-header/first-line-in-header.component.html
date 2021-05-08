@@ -1,0 +1,20 @@
+<div class="row header">
+  <p>
+    REPORTS
+    <img src="assets/photo/strelochka.png">
+  </p>
+  <div class="header_right">
+    <img src="assets/photo/header_1.png">
+    <img src="assets/photo/header_2.png">
+    <div class="dropdown open">
+      <div ngbDropdown class="d-inline-block">
+        <button class="btn btn-secondary" id="dropdownMenuButton" ngbDropdownToggle><p>{{name}}</p></button>
+        <div ngbDropdownMenu aria-labelledby="dropdownMenuButton">
+          <button ngbDropdownItem *ngFor="let a of act">{{a}}</button>
+        </div>
+      </div>
+    </div>
+    <img src="assets/photo/header_3.png">
+    <img src="assets/photo/header_4.png">
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<div class="sidebar-layout">
+
+  <div class="row first">
+    <img src="../../../assets/photo/znak.png">
+  </div>
+
+  <app-item-of-list *ngFor="let item of items"
+                    [title]="item.title"
+                    [photo]="item.photo"
+                    [status]="item.status"></app-item-of-list>
+</div>

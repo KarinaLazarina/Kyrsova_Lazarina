@@ -1,0 +1,17 @@
+<div class="row block prbar">
+  <p>Month wise contract processed for 2017</p>
+  <p class="blue">Total contract processed</p>
+  <div *ngFor="let item of data" style="display: contents">
+    <div class="left"><p>{{item.name}}</p></div>
+    <div class="right"><p>{{item.percent}}</p></div>
+    <div class="progress">
+      <div class="progress-bar"
+           role="progressbar"
+           [style.width]="item.percent"
+           [style.background]="item.color"
+           aria-valuenow="50"
+           aria-valuemin="0"
+           aria-valuemax="100"></div>
+    </div>
+  </div>
+</div>

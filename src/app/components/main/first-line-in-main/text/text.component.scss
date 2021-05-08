@@ -1,0 +1,32 @@
+@import "~src/sass/mixins";
+@import "~src/sass/variables";
+
+.text{
+  width: 65%;
+  float: right;
+  height: 100px;
+}
+.sum{
+  float: left;
+  margin: 0;
+  margin-top: 15px;
+  display: inline-block;
+  @include mainfont(600, 36px, $grey);
+}
+.total{
+  @include mainfont(600, 15px, $grey);
+  display: inline-block;
+  margin: 0;
+  margin-right: 15px;
+  margin-left: 15px;
+  float: left;
+}
+.t{
+  margin-top: 20px;
+}
+.next{
+  @include mainfont(600, 11px, #d4d9e5);
+  display: inline-block;
+  //float: left;
+  //margin-right: 25px;
+}

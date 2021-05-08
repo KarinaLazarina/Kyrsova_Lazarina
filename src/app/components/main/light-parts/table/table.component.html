@@ -1,0 +1,25 @@
+<div class="row block table1">
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">DATE</th>
+      <th scope="col">STORE</th>
+      <th scope="col">CHANNEL</th>
+      <th scope="col">MANAGER</th>
+      <th scope="col">STATUS</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let user of users">
+      <th scope="row" class="date">{{user.date}}</th>
+      <td>{{user.store}}</td>
+      <td>{{user.channel}}</td>
+      <td><img src={{user.photo}}>{{user.manager}}</td>
+      <td *ngIf="user.status == 'completed'" class="completed"><img src="assets/photo/completed.svg">Completed</td>
+      <td *ngIf="user.status == 'rejected'" class="rejected"><img src="assets/photo/rejected.svg">Rejected</td>
+      <td *ngIf="user.status == 'pending'" class="pending"><img src="assets/photo/pending.svg">Pending</td>
+    </tr>
+    </tbody>
+  </table>
+
+</div>

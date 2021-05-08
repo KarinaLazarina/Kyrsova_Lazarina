@@ -1,0 +1,81 @@
+@import "~src/sass/mixins";
+@import "~src/sass/variables";
+
+//.header{
+//  background: $header-color;
+//  @include align(50px);
+//  p{
+//    height: 50%;
+//    @include mainfont(500,15px,white);
+//    margin-left: 25px;
+//    margin-bottom: 0;
+//  }
+//  img{
+//    margin-left: 10px;
+//  }
+//}
+
+//.header_right{
+//  img{
+//    height: 70%;
+//  }
+//  @include align;
+//  margin-left: auto;
+//  margin-right: 20px;
+//  margin-top: 0;
+//  // button
+//  .btn{
+//    @include align(70%);
+//    margin:5px;
+//    border-radius: 25px;
+//    border:none;
+//    background-color:$blue1;
+//  }
+//  .plus{
+//    p{
+//      margin-top: -5px;
+//    }
+//    i{
+//      color: white;
+//      margin: 7px;
+//      margin-top: -12px;
+//      margin-left: 10px
+//    }
+//  }
+//  // dropdown
+//  .dropdown{
+//    p{
+//      margin-left: 0;
+//    }
+//    button{
+//      background:$header-color;
+//      border:none;
+//      box-shadow:none;
+//      &:focus{
+//        box-shadow:none;
+//        background-color:transparent;
+//      }
+//      // &:clicked{
+//      // 	border:none;
+//      // }
+//      &:target{
+//        box-shadow:none;
+//        background-color:transparent;
+//      }
+//      &:hover{
+//        box-shadow:none;
+//        background-color:transparent;
+//      }
+//      &:active{
+//        border:none;
+//        box-shadow:none;
+//        background-color:transparent;
+//      }
+//      // &:visited{
+//      // 	border:none;
+//      // }
+//      // border:2px solid $header-color;
+//    }
+//  }
+//
+//}

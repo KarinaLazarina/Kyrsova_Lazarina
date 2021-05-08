@@ -1,0 +1,36 @@
+@import "~src/sass/mixins";
+@import "~src/sass/variables";
+
+.prbar{
+  min-height: $height1;
+  p{
+    @include mainfont(600, 15px, white);
+    text-align:center;
+    width: 100%;
+    margin: 5px;
+  }
+  .blue{
+    @include mainfont(600, 15px, $blue1);
+    text-align:center;
+    width: 100%;
+  }
+  .progress{
+    width: 100%;
+    margin: 7px;
+    border-radius: 25px;
+    height: 10px;
+  }
+  .progress-bar{
+    border-radius: 25px;
+  }
+  .left{
+    float: left;
+  }
+  .right{
+    p{
+      color: $grey;
+    }
+    margin-right: 5px;
+    margin-left: auto;
+  }
+}
