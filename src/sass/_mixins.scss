@@ -1,0 +1,31 @@
+@import "variables";
+
+@mixin sidebar{
+  color: $header2-color;
+  .row{
+    background: $header2-color;
+    border-left: 3px solid #62baf0;
+  }
+  p{
+    font-weight: 600;
+    font-family: "Source Sans Pro", serif;
+    font-size: 15px;
+    color: white;
+  }
+}
+@mixin mainfont($font-weight,$font-size,$color){
+  font-weight: $font-weight;
+  font-family: "Source Sans Pro";
+  font-size: $font-size;
+  color: $color;
+}
+@mixin align($height:100%){
+  display: flex;
+  align-items: center;
+  height: $height;
+}
+@mixin calendar{
+  border-radius:100px;
+  background:$blue1;
+  border: 1px solid $blue1;
+}

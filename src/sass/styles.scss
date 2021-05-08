@@ -1,0 +1,323 @@
+@import './variables';
+@import './mixins';
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.sidebar-layout {
+  width: 200px;
+  height: 100%;
+  min-width: 200px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  flex-grow: 1;
+  background: $main-color;
+
+  img {
+    margin: 15px;
+  }
+}
+
+.nav-layout {
+  z-index: 2;
+  width: calc(100% - 200px);
+  height: 90px;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+.body-layout {
+  height: auto;
+  margin-left: 200px;
+  margin-top: 90px;
+  background: $bg-color;
+  flex-grow: 1;
+}
+
+.row {
+  margin: 0;
+  padding: 2px;
+}
+
+.block {
+  position: relative;
+  padding: 20px;
+  border: 2px solid $bg-color;
+  margin: 20px;
+  margin-top: 5px;
+  border-radius: 15px;
+  background: white;
+  box-shadow: 0 6px 4px -2px rgba(0, 0, 0, 0.2);
+}
+
+
+.main1 {
+  height: 20%;
+
+  .block {
+    padding: 10px;
+  }
+
+  img {
+    float: left;
+    margin-top: 22px;
+    margin-inline-start: 20px;
+  }
+}
+
+.main2 {
+  height: 80%;
+  margin-top: 10px;
+
+  img {
+    margin-right: 5px;
+  }
+}
+
+.svetloe {
+  padding: 0;
+}
+
+.temnoe {
+  padding: 0;
+
+  .block {
+    background-color: $main-color;
+  }
+}
+
+
+#calendar-wrap {
+  height: 355px;
+  width: 100%;
+  border-radius: 15px;
+}
+
+#calendar {
+  font-family: "Source Sans Pro";
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: #393f4f;
+  color: #ffffff;
+  box-sizing: border-box;
+  border-radius: 15px;
+  height: 100%;
+  width: 100%;
+}
+
+.calendar-head {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  padding-top: 7%;
+}
+
+.calendar-head:hover {
+  cursor: default
+}
+
+.calender-header-text {
+  position: relative;
+  width: 200px;
+  margin: 0 auto;
+  top: 3px;
+  font-weight: 600;
+  color: white
+}
+
+.calender-header-text-month {
+  font-size: 20px
+}
+
+.calender-header-text-year {
+  font-size: 20px;
+  position: relative;
+  left: 10px
+}
+
+.calendar-arrow-left {
+  position: absolute;
+  top: 5px;
+  left: 12%;
+  padding-top: 10%;
+}
+
+.calendar-arrow-right {
+  position: absolute;
+  top: 5px;
+  right: 10%;
+  padding-top: 10%;
+}
+
+.calendar-arrow:hover {
+  cursor: pointer
+}
+
+.calendar-days-names {
+  position: relative;
+  top: 8px;
+  width: 90%;
+  text-decoration: none;
+  margin: 0 auto;
+}
+
+.calendar-days-names-item {
+  position: relative;
+  color: white
+}
+
+.calendar-days-names-item::after {
+  display: block;
+  width: 2px;
+  height: 20px;
+  background-color: #00172d;
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  margin-top: -10px
+}
+
+.calendar-days-names-item:last-child:after {
+  display: none
+}
+
+#calendar-body {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 9px;
+}
+
+.calendar-body {
+  width: 90%;
+  border-spacing: 4px 3px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 5px;
+  height: 50%;
+}
+
+.calendar-body:hover {
+  cursor: pointer
+}
+
+tr {
+  height: 40px;
+}
+
+.calendar-cell {
+  border-radius: 50px;
+  margin-left: 10px;
+  transition: box-shadow .22s ease-in;
+  color: white;
+  padding: 5px 10px 5px 10px;
+}
+
+.calendar-cell:hover {
+  border-radius: 50%;
+  background: #62baf0;
+  cursor: pointer;
+}
+
+.calendar-cell-selected {
+  border-radius: 50%;
+  background: #62baf0;
+}
+
+.calendar-cell-gray {
+  color: #4b5457
+}
+
+.calendar-cell-gray:hover {
+  box-shadow: none;
+  cursor: default
+}
+
+.calendar-cell-today {
+  background-color: #62baf0;
+  color: #fff;
+  border-radius: 50%;
+}
+
+//@import "~src/sass/mixins";
+//@import "~src/sass/variables";
+//
+//.header {
+//  background: $header-color;
+//  @include align(50px);
+//
+//  p {
+//    height: 50%;
+//    @include mainfont(500, 15px, white);
+//    margin-left: 25px;
+//    margin-bottom: 0;
+//  }
+//
+//  img {
+//    margin-left: 10px;
+//  }
+//
+//  .header_right {
+//    img {
+//      height: 70%;
+//    }
+//
+//    @include align;
+//    margin-left: auto;
+//    margin-right: 20px;
+//    margin-top: 0;
+//    // button
+//    .btn {
+//      @include align(70%);
+//      margin: 5px;
+//      border-radius: 25px;
+//      border: none;
+//      background-color: $blue1;
+//    }
+//
+//    // dropdown
+//    .dropdown {
+//      p {
+//        margin-left: 0;
+//      }
+//
+//      button {
+//        background: $header-color;
+//        border: none;
+//        box-shadow: none;
+//
+//        &:focus {
+//          box-shadow: none;
+//          background-color: transparent;
+//        }
+//
+//        &:target {
+//          box-shadow: none;
+//          background-color: transparent;
+//        }
+//
+//        &:hover {
+//          box-shadow: none;
+//          background-color: transparent;
+//        }
+//
+//        &:active {
+//          border: none;
+//          box-shadow: none;
+//          background-color: transparent;
+//        }
+//      }
+//    }
+//  }
+//}
+//
