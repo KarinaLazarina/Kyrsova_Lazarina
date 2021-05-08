@@ -18,6 +18,7 @@ import { GrafComponent } from './components/main/light-parts/graf/graf.component
 import { TableComponent } from './components/main/light-parts/table/table.component';
 import { ProgressBarComponent } from './components/main/dark-parts/progress-bar/progress-bar.component';
 import { CalendarComponent } from './components/main/dark-parts/calendar/calendar.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { CalendarComponent } from './components/main/dark-parts/calendar/calenda
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

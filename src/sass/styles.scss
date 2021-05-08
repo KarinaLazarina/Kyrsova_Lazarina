@@ -43,7 +43,7 @@ body {
 }
 
 .row {
-  margin: 0;
+  margin: 0 !important;
   padding: 2px;
 }
 
@@ -51,8 +51,8 @@ body {
   position: relative;
   padding: 20px;
   border: 2px solid $bg-color;
-  margin: 20px;
-  margin-top: 5px;
+  margin: 20px !important;
+  margin-top: 5px !important;
   border-radius: 15px;
   background: white;
   box-shadow: 0 6px 4px -2px rgba(0, 0, 0, 0.2);
@@ -91,6 +91,7 @@ body {
 
   .block {
     background-color: $main-color;
+    margin: 5px 0 20px 0  !important;
   }
 }
 
@@ -249,75 +250,6 @@ tr {
   border-radius: 50%;
 }
 
-//@import "~src/sass/mixins";
-//@import "~src/sass/variables";
-//
-//.header {
-//  background: $header-color;
-//  @include align(50px);
-//
-//  p {
-//    height: 50%;
-//    @include mainfont(500, 15px, white);
-//    margin-left: 25px;
-//    margin-bottom: 0;
-//  }
-//
-//  img {
-//    margin-left: 10px;
-//  }
-//
-//  .header_right {
-//    img {
-//      height: 70%;
-//    }
-//
-//    @include align;
-//    margin-left: auto;
-//    margin-right: 20px;
-//    margin-top: 0;
-//    // button
-//    .btn {
-//      @include align(70%);
-//      margin: 5px;
-//      border-radius: 25px;
-//      border: none;
-//      background-color: $blue1;
-//    }
-//
-//    // dropdown
-//    .dropdown {
-//      p {
-//        margin-left: 0;
-//      }
-//
-//      button {
-//        background: $header-color;
-//        border: none;
-//        box-shadow: none;
-//
-//        &:focus {
-//          box-shadow: none;
-//          background-color: transparent;
-//        }
-//
-//        &:target {
-//          box-shadow: none;
-//          background-color: transparent;
-//        }
-//
-//        &:hover {
-//          box-shadow: none;
-//          background-color: transparent;
-//        }
-//
-//        &:active {
-//          border: none;
-//          box-shadow: none;
-//          background-color: transparent;
-//        }
-//      }
-//    }
-//  }
-//}
-//
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
