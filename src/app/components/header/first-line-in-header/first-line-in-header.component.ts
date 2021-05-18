@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {actions, nameForHeader} from '../../../data/dataForHeader';
+import {AppService} from '../../../app.service';
 
 
 @Component({
@@ -8,10 +8,15 @@ import {actions, nameForHeader} from '../../../data/dataForHeader';
   styleUrls: ['./first-line-in-header.component.scss']
 })
 export class FirstLineInHeaderComponent implements OnInit {
-  act: string[] = actions;
-  name: string = nameForHeader;
+  act: string[];
+  name: string;
 
-  constructor() {
+  constructor(private service: AppService) {
+    service.getDataForHeader().subscribe(value => {
+      this.act = value[0].actions.split(',');
+      console.log(this.act);
+      this.name = value[0].name;
+    });
   }
 
   ngOnInit(): void {

@@ -15,9 +15,6 @@ export class ItemOfListComponent implements OnInit {
 
   constructor() {}
 
-
-
   ngOnInit(): void {
   }
-
 }

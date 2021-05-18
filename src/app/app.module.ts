@@ -19,6 +19,7 @@ import { TableComponent } from './components/main/light-parts/table/table.compon
 import { ProgressBarComponent } from './components/main/dark-parts/progress-bar/progress-bar.component';
 import { CalendarComponent } from './components/main/dark-parts/calendar/calendar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

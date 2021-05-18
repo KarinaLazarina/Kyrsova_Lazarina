@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {sidebarItems} from '../../data/dataForSidebar';
+import {Component, OnInit} from '@angular/core';
+import {AppService} from '../../app.service';
 
 @Component({
   selector: 'app-side-bar',
@@ -7,9 +7,12 @@ import {sidebarItems} from '../../data/dataForSidebar';
   styleUrls: ['./side-bar.component.scss']
 })
 export class SideBarComponent implements OnInit {
-  items = sidebarItems;
+  items;
 
-  constructor() { }
+  constructor(private service: AppService) {
+    service.getDataForSidebar().subscribe(value => this.items = value);
+    console.log(this.items);
+  }
 
   ngOnInit(): void {
   }

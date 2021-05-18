@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {dataForFL} from '../../../data/dataForFLMain';
+import {Component, OnInit} from '@angular/core';
+import {AppService} from '../../../app.service';
 
 @Component({
   selector: 'app-first-line-in-main',
@@ -7,9 +7,11 @@ import {dataForFL} from '../../../data/dataForFLMain';
   styleUrls: ['./first-line-in-main.component.scss']
 })
 export class FirstLineInMainComponent implements OnInit {
-  text = dataForFL;
+  text;
 
-  constructor() { }
+  constructor(private service: AppService) {
+    service.getDataForFLMain().subscribe(value => this.text = value);
+  }
 
   ngOnInit(): void {
   }

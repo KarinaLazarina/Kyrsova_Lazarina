@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {dataForPB} from '../../../../data/dataForProgressBar';
+import {Component, OnInit} from '@angular/core';
+import {AppService} from '../../../../app.service';
 
 @Component({
   selector: 'app-progress-bar',
@@ -7,9 +7,11 @@ import {dataForPB} from '../../../../data/dataForProgressBar';
   styleUrls: ['./progress-bar.component.scss']
 })
 export class ProgressBarComponent implements OnInit {
-  data: any = dataForPB;
+  data: any;
 
-  constructor() { }
+  constructor(private service: AppService) {
+    service.getDataForPB().subscribe(value => this.data = value);
+  }
 
   ngOnInit(): void {
   }

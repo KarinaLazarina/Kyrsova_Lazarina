@@ -66,6 +66,12 @@
           background-color: transparent;
         }
       }
+      .items{
+        background: white;
+        &:hover {
+          background-color: $header-color;
+        }
+      }
     }
   }
 }

@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {dataForTable} from '../../../../data/dataForTable';
+import {Component, OnInit} from '@angular/core';
+import {AppService} from '../../../../app.service';
 
 @Component({
   selector: 'app-table',
@@ -7,9 +7,11 @@ import {dataForTable} from '../../../../data/dataForTable';
   styleUrls: ['./table.component.scss']
 })
 export class TableComponent implements OnInit {
-  users: any = dataForTable;
+  users: any;
 
-  constructor() { }
+  constructor(private service: AppService) {
+    service.getDataForTable().subscribe(value => this.users = value);
+  }
 
   ngOnInit(): void {
   }
